@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://sandbox/ci213/';
+$config['base_url']	= '/bb-ci213/';//Adjusted
 
 /*
 |--------------------------------------------------------------------------
