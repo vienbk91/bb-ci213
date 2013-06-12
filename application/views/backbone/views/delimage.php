@@ -55,8 +55,8 @@ var GalleryImage = Backbone.Model.extend({
         }
     },
     initialize:function(){
-        this.on("invalid", function(model, error){
-            console.log(error + " occured for " + model);
+        this.on("invalid", function( error){
+            console.log("Error: "+error );
         });
     }
 });
@@ -93,7 +93,7 @@ var GalleryImageCollectionView = Backbone.View.extend({
                 //image_source: Math.random(),
                 image_alt: $('#imgalt').val(),
                 image_title: $('#imgcaption').val()
-            });
+            },{validate:true});
             e.preventDefault();
             this.collection.add(responseObj);
             this.render();
